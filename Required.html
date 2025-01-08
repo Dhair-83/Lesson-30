@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="color:red">Please enter your age here.</p>
+    <input id="stag" type="number" min="14" max="32" required>
+    <button onclick="crrtage()">SUBMIT</button>
+    <p id="fyiopen"></p>
+    <script>
+        function crrtage()
+        {
+            var stblock=document.getElementById("stag");
+            if(!stblock.checkValidity())
+        {
+            document.getElementById("fyiopen").innerHTML=stblock.validationMessage;
+        }
+        else
+        {
+            document.getElementById("fyiopen").innerHTML="LETS GOOO";
+        }
+        }
+
+    </script>
+</body>
+</html>
